@@ -14,17 +14,22 @@ var spotify = new Spotify(keys.spotify);
 var key1 = process.argv[2];
 var key2 = process.argv[3];
 
-/* creating heading for the log entry */
-if (key2 === undefined) {
+/* manipulating the prcess.argv[3] i.e. key2 variable based on user input */
+if ((key1 === "spotify-this-song") && (key2 === undefined)) {
     key2 = "The Sign Ace of Base"; // passing default song if the user doesn't enter any song
+}
+if ((key1 === "movie-this") && (key2 === undefined)) {
+    key2 = "Mr. Nobody"; // passing default song if the user doesn't enter any song
 }
 if (key1 === "do-what-it-says") {
     key2 = "";
 }
+
+/* creating heading for the log entry */
 text = "\n" + moment().format("MM/DD/YYYY HH:mm") + ", " + key1 + ", " + key2 + '\n';
 logEntry(text);
 
-/* switch to different action based on user input i.e. process.argv[2] */
+/* switch to different function based on user input i.e. process.argv[2] */
 switch (key1) {
     case "concert-this":
         concertThis()
