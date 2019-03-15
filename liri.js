@@ -1,6 +1,5 @@
 // grabbing the fs package to handle read/write.
 var fs = require("fs");
-var text;
 
 /* loading all required libraries */
 require("dotenv").config();
@@ -13,13 +12,14 @@ var keys = require("./keys.js");
 var spotify = new Spotify(keys.spotify);
 var key1 = process.argv[2];
 var key2 = process.argv[3];
+var text;
 
 /* manipulating the prcess.argv[3] i.e. key2 variable based on user input */
 if ((key1 === "spotify-this-song") && (key2 === undefined)) {
     key2 = "The Sign Ace of Base"; // passing default song if the user doesn't enter any song
 }
 if ((key1 === "movie-this") && (key2 === undefined)) {
-    key2 = "Mr. Nobody"; // passing default song if the user doesn't enter any song
+    key2 = "Mr. Nobody"; // passing default movie if the user doesn't enter any movie
 }
 if (key1 === "do-what-it-says") {
     key2 = "";
