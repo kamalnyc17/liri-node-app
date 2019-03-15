@@ -1,17 +1,17 @@
 // grabbing the fs package to handle read/write.
 var fs = require("fs");
 
-/* loading all required libraries */
+/* loading all required libraries/packages */
 require("dotenv").config();
 var Spotify = require('node-spotify-api');
-var axios = require("axios");
-var moment = require("moment");
+var axios   = require("axios");
+var moment  = require("moment");
 
 /* global variables */
-var keys = require("./keys.js");
+var keys    = require("./keys.js");
 var spotify = new Spotify(keys.spotify);
-var key1 = process.argv[2];
-var key2 = process.argv[3];
+var key1    = process.argv[2];
+var key2    = process.argv[3];
 var text;
 
 /* manipulating the prcess.argv[3] i.e. key2 variable based on user input */
@@ -32,7 +32,7 @@ logEntry(text);
 /* switch to different function based on user input i.e. process.argv[2] */
 switch (key1) {
     case "concert-this":
-        concertThis()
+        concertThis();
         break;
 
     case "spotify-this-song":
@@ -40,7 +40,7 @@ switch (key1) {
         break;
 
     case "movie-this":
-        movieThis()
+        movieThis();
         break;
 
     case "do-what-it-says":
@@ -112,9 +112,9 @@ function spotifyCall() {
             var artists = "";
             for (var j = 0; j < response.tracks.items[0].album.artists.length; j++) {
                 if (artists === "") {
-                    artists = response.tracks.items[0].album.artists[j].name
+                    artists = response.tracks.items[0].album.artists[j].name;
                 } else {
-                    artists = artists + ", " + response.tracks.items[0].album.artists[j].name
+                    artists = artists + ", " + response.tracks.items[0].album.artists[j].name;
                 }
             }
             console.log("Artists: " + artists);
@@ -134,11 +134,9 @@ function spotifyCall() {
 /* function to update the log file */
 function logEntry(lineText) {
     fs.appendFile("log.txt", lineText, function (err) {
-
         // If an error was experienced we will log it.
         if (err) {
             console.log(err);
         }
-
     });
 }
