@@ -29,7 +29,7 @@ switch (key1) {
                     console.log("Name of the venue: " + response.data[i].venue.name);
                     console.log("Venue location: " + theLocation);
                     console.log("Date of the Event: " + moment(response.data[i].datetime).format("MM/DD/YYYY"));
-                    console.log("-------------"); 
+                    console.log("-------------");
 
                     /* creating details for the log entry */
                     text = response.data[i].venue.name + ", " + theLocation + ", " + moment(response.data[i].datetime).format("MM/DD/YYYY") + '\n';
@@ -40,28 +40,27 @@ switch (key1) {
         break;
 
     case "spotify-this-song":
+        if (key2===undefined){
+            key2 = "The Sign";
+        }
         spotify
             .search({
                 type: 'track',
                 query: key2
             })
             .then(function (response) {
-                for (var i = 0; i < response.tracks.items.length; i++) {
-                    if (response.tracks.items[i].name.toUpperCase() === key2.toUpperCase()) {
-                        var artists = "";
-                        for (var j = 0; j < response.tracks.items[i].album.artists.length; j++) {
-                            if (artists === "") {
-                                artists = response.tracks.items[i].album.artists[j].name
-                            } else {
-                                artists = artists + ", " + response.tracks.items[i].album.artists[j].name
-                            }
-                        }
-                        console.log(artists);
-                        console.log("Name of the Song: " + response.tracks.items[i].name);
-                        console.log("Preview URL: " + response.tracks.items[i].preview_url);
-                        console.log("Name of the Album: " + response.tracks.items[i].album.name);
+                var artists = "";
+                for (var j = 0; j < response.tracks.items[0].album.artists.length; j++) {
+                    if (artists === "") {
+                        artists = response.tracks.items[0].album.artists[j].name
+                    } else {
+                        artists = artists + ", " + response.tracks.items[0].album.artists[j].name
                     }
                 }
+                console.log("Artists: " + artists);
+                console.log("Name of the Song: " + response.tracks.items[0].name);
+                console.log("Preview URL: " + response.tracks.items[0].preview_url);
+                console.log("Name of the Album: " + response.tracks.items[0].album.name);
             })
             .catch(function (err) {
                 console.log(err);
