@@ -40,8 +40,8 @@ switch (key1) {
         break;
 
     case "spotify-this-song":
-        if (key2===undefined){
-            key2 = "The Sign";
+        if (key2 === undefined) {
+            key2 = "The Sign Ace of Base";  // passing default song if the user doesn't enter any song
         }
         spotify
             .search({
@@ -61,6 +61,10 @@ switch (key1) {
                 console.log("Name of the Song: " + response.tracks.items[0].name);
                 console.log("Preview URL: " + response.tracks.items[0].preview_url);
                 console.log("Name of the Album: " + response.tracks.items[0].album.name);
+
+                /* creating details for the log entry */
+                text = artists + ", " + response.tracks.items[0].name + ", " + response.tracks.items[0].preview_url + ", " + response.tracks.items[0].album.name + '\n';
+                logEntry(text);
             })
             .catch(function (err) {
                 console.log(err);
