@@ -119,7 +119,6 @@ function spotifyCall() {
 
             /* creating details for the log entry */
             text = artists + ", " + response.tracks.items[0].name + ", " + response.tracks.items[0].preview_url + ", " + response.tracks.items[0].album.name + '\n';
-            console.log( text )
             logEntry(text);
         })
         .catch(function (err) {
