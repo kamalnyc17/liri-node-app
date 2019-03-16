@@ -22,4 +22,4 @@ Alternatively,
 
 If you want to embed images, this is how you do it:
 
-![ScreenShot](https://kamalnyc17.github.io/liri-node-app/images/demo-image.jpg)
+![this is a test](https://kamalnyc17.github.io/liri-node-app/images/demo-image.jpg)
