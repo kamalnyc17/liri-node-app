@@ -22,4 +22,4 @@ Alternatively,
 
 If you want to embed images, this is how you do it:
 
-![ScreenShot](images/demo image.jpg)
+![ScreenShot]("images/demo image.jpg")
