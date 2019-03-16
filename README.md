@@ -19,4 +19,7 @@ Alternatively,
 - And if you have sub points, put two spaces before the dash or star:
   - Like this
   - And this
-  
+
+If you want to embed images, this is how you do it:
+
+![ScreenShot](images/demo image.jpg)
