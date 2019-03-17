@@ -7,7 +7,7 @@
 In this project, we have created LIRI. LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data. LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies based on user's parameters. **All user parameters and their results will be appened in log.txt**
 
 ## PARAMETER: concert-this
-### COMMAND: node liri.js concert-this <artist/band name here>
+### COMMAND: node liri.js concert-this 'artist/band name here'
 This will search the Bands in Town Artist Events API for an artist and render the following information about each event to the terminal:
 1. Name of the venue
 2. Venue location
@@ -30,7 +30,7 @@ Screenshot of the result:
 ![spotify-this-song](https://github.com/kamalnyc17/liri-node-app/blob/master/images/spotify-this-song.jpg)
 
 ## PARAMETER: movie-this
-### COMMAND: node liri.js movie-this <movie name here>
+### COMMAND: node liri.js movie-this 'movie name here'
 This will search the OMDB API for a movie and render the following information to the terminal:
 1. Title of the movie
 2. Year the movie came out
