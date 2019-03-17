@@ -17,7 +17,7 @@ Screenshot of the result:
 ![concert-this](https://github.com/kamalnyc17/liri-node-app/blob/master/images/concert-this.jpg)
 
 ## PARAMETER: spotify-this-song
-### COMMAND: node liri.js spotify-this-song <song name here>
+### COMMAND: node liri.js spotify-this-song 'song name here'
 This will search the Spotify API for an artist and render the following information to the terminal:
 1. Artist(s)
 2. The song's name
