@@ -4,7 +4,7 @@
 ![Homepage](https://github.com/kamalnyc17/liri-node-app/blob/master/images/homepage.jpg)
 
 ## Overview
-In this project, we have created LIRI. LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data. LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies based on user's parameters.
+In this project, we have created LIRI. LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data. LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies based on user's parameters. **All user parameters and their results will be appened in logged in log.txt**
 
 ## concert-this
 ### COMMAND: node liri.js concert-this '<artist/band name here>'
@@ -28,6 +28,21 @@ This will search the Spotify API for an artist and render the following informat
 Screenshot of the result:
 ![spotify-this-song](https://github.com/kamalnyc17/liri-node-app/blob/master/images/spotify-this-song.jpg)
 
+## movie-this
+### COMMAND: node liri.js movie-this '<movie name here>'
+This will search the OMDB API for a movie and render the following information to the terminal:
+1. Title of the movie
+2. Year the movie came out
+3. IMDB Rating of the movie
+4. Rotten Tomatoes Rating of the movie
+5. Country where the movie was produced
+6. Language of the movie
+7. Plot of the movie
+8. Actors in the movie
 
+**(if the user doesn't enter a movie name, the program will output data for the movie 'Mr. Nobody.')**
+
+Screenshot of the result:
+![movie-this](https://github.com/kamalnyc17/liri-node-app/blob/master/images/movie-this.jpg)
 
 
