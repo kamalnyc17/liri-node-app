@@ -6,7 +6,7 @@
 ## Overview
 In this project, we have created LIRI. LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data. LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies based on user's parameters. **All user parameters and their results will be appened in log.txt**
 
-## concert-this
+## PARAMETER: concert-this
 ### COMMAND: node liri.js concert-this <artist/band name here>
 This will search the Bands in Town Artist Events API for an artist and render the following information about each event to the terminal:
 1. Name of the venue
@@ -16,7 +16,7 @@ This will search the Bands in Town Artist Events API for an artist and render th
 Screenshot of the result:
 ![concert-this](https://github.com/kamalnyc17/liri-node-app/blob/master/images/concert-this.jpg)
 
-## spotify-this-song
+## PARAMETER: spotify-this-song
 ### COMMAND: node liri.js spotify-this-song <song name here>
 This will search the Spotify API for an artist and render the following information to the terminal:
 1. Artist(s)
@@ -29,7 +29,7 @@ This will search the Spotify API for an artist and render the following informat
 Screenshot of the result:
 ![spotify-this-song](https://github.com/kamalnyc17/liri-node-app/blob/master/images/spotify-this-song.jpg)
 
-## movie-this
+## PARAMETER: movie-this
 ### COMMAND: node liri.js movie-this <movie name here>
 This will search the OMDB API for a movie and render the following information to the terminal:
 1. Title of the movie
@@ -46,7 +46,7 @@ This will search the OMDB API for a movie and render the following information t
 Screenshot of the result:
 ![movie-this](https://github.com/kamalnyc17/liri-node-app/blob/master/images/movie-this.jpg)
 
-## do-what-it-says
+## PARAMETER: do-what-it-says
 ### COMMAND: node liri.js do-what-it-says
 Using the fs Node package, LIRI will take the text inside of random.txt file located in the current folder and then use it to run spotify-this-song commands.
 At present the rondom.txt contains "I Want it That Way". LIRI will search the Spotify API for this song and render the following information to the terminal:
