@@ -13,6 +13,7 @@ This will search the Bands in Town Artist Events API for an artist and render th
 2. Venue location
 3. Date of the Event (MomentJS will format this as "MM/DD/YYYY")
 Screenshot of the result:
+
 ![concert-this](https://github.com/kamalnyc17/liri-node-app/blob/master/images/concert-this.jpg)
 
 ## spotify-this-song
@@ -53,5 +54,6 @@ At present the rondom.txt contains "I Want it That Way". LIRI will search the Sp
 2. The song's name
 3. A preview link of the song from Spotify
 4. The album that the song is from
+
 Screenshot of the result:
 ![do-what-it-says](https://github.com/kamalnyc17/liri-node-app/blob/master/images/do-what-it-says.jpg)
