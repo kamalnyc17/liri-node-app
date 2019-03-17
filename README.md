@@ -12,8 +12,8 @@ This will search the Bands in Town Artist Events API for an artist and render th
 1. Name of the venue
 2. Venue location
 3. Date of the Event (MomentJS will format this as "MM/DD/YYYY")
-Screenshot of the result:
 
+Screenshot of the result:
 ![concert-this](https://github.com/kamalnyc17/liri-node-app/blob/master/images/concert-this.jpg)
 
 ## spotify-this-song
