@@ -22,7 +22,9 @@ This will search the Spotify API for an artist and render the following informat
 2. The song's name
 3. A preview link of the song from Spotify
 4. The album that the song is from
+
 **(if the user doesn't enter the song name, the program will default to "The Sign" by Ace of Base.)**
+
 Screenshot of the result:
 ![spotify-this-song](https://github.com/kamalnyc17/liri-node-app/blob/master/images/spotify-this-song.jpg)
 
