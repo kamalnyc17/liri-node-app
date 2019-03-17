@@ -1,4 +1,7 @@
-# liri-node-app
+# LIRI-Node-App
+## Node.JS Project
+
+![Homepage](https://github.com/kamalnyc17/liri-node-app/blob/master/images/homepage.jpg)
 
 It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com)
 
