@@ -67,9 +67,9 @@ function concertThis() {
         function (response) {
             for (var i = 0; i < response.data.length; i++) {
                 var theLocation = response.data[i].venue.city + ", " + response.data[i].venue.region + ", " + response.data[i].venue.country
-                console.log("Name of the venue: " + response.data[i].venue.name);
-                console.log("Venue location: " + theLocation);
-                console.log("Date of the Event: " + moment(response.data[i].datetime).format("MM/DD/YYYY"));
+                console.log(`Name of the venue: ${response.data[i].venue.name}`);
+                console.log(`Venue location: ${theLocation}`);
+                console.log(`Date of the Event: ${moment(response.data[i].datetime).format("MM/DD/YYYY")}`);
                 console.log("-------------");
 
                 /* creating details for the log entry */
@@ -85,14 +85,14 @@ function movieThis() {
     var queryURL = "http://www.omdbapi.com/?t=" + key2.replace(" ", "-") + "&y=&plot=short&apikey=trilogy";
     axios.get(queryURL).then(
         function (response) {
-            console.log("Title of the movie: " + response.data.Title);
-            console.log("Year the movie came out: " + response.data.Year);
-            console.log("IMDB Rating of the movie: " + response.data.imdbRating);
-            console.log("Rotten Tomatoes Rating of the movie: " + response.data.Ratings[1].Value);
-            console.log("Country where the movie was produced: " + response.data.Country);
-            console.log("Language of the movie: " + response.data.Language);
-            console.log("Plot of the movie: " + response.data.Plot);
-            console.log("Actors in the movie: " + response.data.Actors);
+            console.log(`Title of the movie: ${response.data.Title}`);
+            console.log(`Year the movie came out: ${response.data.Year}`);
+            console.log(`IMDB Rating of the movie: ${response.data.imdbRating}`);
+            console.log(`Rotten Tomatoes Rating of the movie: ${response.data.Ratings[1].Value}`);
+            console.log(`Country where the movie was produced: ${response.data.Country}`);
+            console.log(`Language of the movie: ${response.data.Language}`);
+            console.log(`Plot of the movie: ${response.data.Plot}`);
+            console.log(`Actors in the movie: ${response.data.Actors}`);
 
             /* creating details for the log entry */
             text = response.data.Title + ", " + response.data.Year + ", " + response.data.imdbRating + ", " + response.data.Ratings[1].Value + ", " + response.data.Country + ", " + response.data.Language + ", " + response.data.Plot + ", " + response.data.Actors + '\n';
@@ -117,10 +117,10 @@ function spotifyCall() {
                     artists = artists + ", " + response.tracks.items[0].album.artists[j].name;
                 }
             }
-            console.log("Artists: " + artists);
-            console.log("Name of the Song: " + response.tracks.items[0].name);
-            console.log("Preview URL: " + response.tracks.items[0].preview_url);
-            console.log("Name of the Album: " + response.tracks.items[0].album.name);
+            console.log(`Artists: ${artists}`);
+            console.log(`Name of the Song: ${response.tracks.items[0].name}`);
+            console.log(`Preview URL: ${response.tracks.items[0].preview_url}`);
+            console.log(`Name of the Album: ${response.tracks.items[0].album.name}`);
 
             /* creating details for the log entry */
             text = artists + ", " + response.tracks.items[0].name + ", " + response.tracks.items[0].preview_url + ", " + response.tracks.items[0].album.name + '\n';
